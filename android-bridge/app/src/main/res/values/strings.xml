@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CallBridge</string>
+    <string name="service_running">پل ارتباطی تماس فعال است</string>
+    <string name="waiting_for_iphone">در انتظار اتصال آیفون...</string>
+    <string name="iphone_connected">آیفون ۱۵ پرو متصل است</string>
+    <string name="incoming_call">تماس ورودی</string>
+</resources>

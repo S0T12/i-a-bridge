@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CallBridge Android"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="پل بلادرنگ تماس به آیفون ۱۵ پرو"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:strokeColor="#333333"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:id="@+id/statusIndicator"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="در حال شروع سرویس..."
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvIpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آدرس هات‌اسپات: 192.168.43.1:8765"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvCallState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="وضعیت تماس: آزاد (IDLE)"
+                android:textColor="#4CAF50"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="اعطای دسترسی‌های لازم"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF6200EE"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSetDefaultDialer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="تنظیم به عنوان پاسخ‌دهنده پیش‌فرض"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#333333"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnTestCall"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="ارسال تماس تستی به آیفون"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#00897B"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>
