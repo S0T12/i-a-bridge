@@ -30,8 +30,6 @@ class AudioEngine {
 
     private func setupAudioEngine() {
         let inputNode = audioEngine.inputNode
-        let outputNode = audioEngine.outputNode
-
         let hardwareFormat = inputNode.inputFormat(forBus: 0)
         
         // 16kHz Mono 16-bit PCM format matching Android bridge

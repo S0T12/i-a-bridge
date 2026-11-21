@@ -16,14 +16,10 @@ class CallKitManager: NSObject, CXProviderDelegate {
     private var activeCallUUID: UUID?
 
     override init() {
-        let configuration = CXProviderConfiguration()
-        configuration.localizedName = "CallBridge"
+        let configuration = CXProviderConfiguration(localizedName: "CallBridge")
         configuration.supportsVideo = false
         configuration.maximumCallsPerCallGroup = 1
         configuration.supportedHandleTypes = [.phoneNumber, .generic]
-        if let icon = UIImage(named: "AppIcon") {
-            configuration.iconTemplateImageData = icon.pngData()
-        }
         
         self.provider = CXProvider(configuration: configuration)
         super.init()
@@ -98,7 +94,7 @@ class CallKitManager: NSObject, CXProviderDelegate {
     private func configureAudioSession() {
         do {
             let session = AVAudioSession.sharedInstance()
-            try session.setCategory(.playAndRecord, mode: .voiceChat, options: [.allowBluetooth, .allowBluetoothA2DP, .defaultToSpeaker])
+            try session.setCategory(.playAndRecord, mode: .voiceChat, options: [.allowBluetoothHFP, .allowBluetoothA2DP, .defaultToSpeaker])
             try session.setPreferredSampleRate(16000.0)
             try session.setPreferredIOBufferDuration(0.02) // 20ms buffer
             try session.setActive(true)
